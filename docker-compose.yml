@@ -1,0 +1,14 @@
+
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: karayabandhu/skilled-ustaad-backend:latest
+    container_name: skilled_ustaad_backend
+    restart: always
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5000:5000"
